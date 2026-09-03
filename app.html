@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Для Аysu ❤️</title>
+
+    <style>
+        body {
+            background: pink;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding-top: 150px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 25px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #yes {
+            background: lightgreen;
+        }
+
+        #no {
+            background: lightcoral;
+            position: absolute;
+        }
+
+        #message {
+            font-size: 30px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Этот сайт создан специально для Аysu ❤️</h2>
+
+    <h1>Помиримся? ❤️</h1>
+
+    <button id="yes" onclick="yes()">Да ❤️</button>
+
+    <button id="no" onmouseover="moveButton()">
+        Нет 😢
+    </button>
+
+    <p id="message"></p>
+
+    <script>
+        function yes() {
+            document.getElementById("message").textContent =
+                "Давай помиримся, я скучал по тебе ❤️";
+        }
+
+        function moveButton() {
+            const button = document.getElementById("no");
+
+            const x = Math.random() *
+                (window.innerWidth - button.offsetWidth);
+
+            const y = Math.random() *
+                (window.innerHeight - button.offsetHeight);
+
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
+
